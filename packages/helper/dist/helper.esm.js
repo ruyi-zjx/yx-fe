@@ -1,5 +1,5 @@
 /*!
- * helper.js v0.0.0
+ * helper.js v0.0.1
  * (c) 2020-2020 zjx <ruyi_zozo@163.com>
  * Released under the MIT License.
  */
@@ -74,7 +74,7 @@ var VVisible = {
             handler(eleSetting, elementName, el, binding, vnode);
         }
         else {
-            console.warn("[visible-yx] \u672A\u53D1\u73B0" + component + "\u7EC4\u4EF6\u7C7B\u578B\u7684\u5904\u7406\u51FD\u6570\uFF0C\u8BF7\u68C0\u67E5" + binding.rawName + "\u6307\u4EE4\u8BED\u6CD5\u662F\u5426\u6B63\u786E");
+            console.warn(DIRE + " \u672A\u53D1\u73B0`" + component + "`\u7EC4\u4EF6\u7C7B\u578B\u7684\u5904\u7406\u51FD\u6570\uFF0C\u8BF7\u68C0\u67E5`" + binding.rawName + "`\u6307\u4EE4\u8BED\u6CD5\u662F\u5426\u6B63\u786E");
         }
     },
 };
