@@ -6,7 +6,7 @@
     "yx",
     "utils"
   ],
-  "author": "zjx <ruyi_zozo@163.com>",
+  "author": "zzzjx <ruyi_zozo@163.com>",
   "homepage": "",
   "license": "ISC",
   "main": "dist/helper.cjs.js",
@@ -17,7 +17,7 @@
   ],
   "typings": "types",
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "yarn run clean && rollup -c",
@@ -44,5 +44,6 @@
   },
   "dependencies": {
     "path-to-regexp": "^6.2.0"
-  }
+  },
+  "gitHead": "0ce32687c8407c6b57d875dc51e59525b1753781"
 }
