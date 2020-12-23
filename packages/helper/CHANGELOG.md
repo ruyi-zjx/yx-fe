@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.5...yxfe-helper@0.0.7) (2020-12-23)
+
+
+### Bug Fixes
+
+* 版本号修改 ([b49705f](https://github.com/ruyi-zjx/yx-fe/commit/b49705f25ff97cf5930e69465203f5db07148d6d))
+
+
+
+
+
 ## [0.0.5](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.4...yxfe-helper@0.0.5) (2020-12-23)
 
 **Note:** Version bump only for package yxfe-helper
