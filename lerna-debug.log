@@ -1,0 +1,7 @@
+45 error Error: Command failed: git tag yxfe-helper@0.0.2 -m yxfe-helper@0.0.2
+45 error fatal: tag 'yxfe-helper@0.0.2' already exists
+45 error
+45 error     at makeError (/Users/lihuajie/Documents/personal/yx-fe/node_modules/execa/index.js:174:9)
+45 error     at /Users/lihuajie/Documents/personal/yx-fe/node_modules/execa/index.js:278:16
+45 error     at processTicksAndRejections (node:internal/process/task_queues:93:5)
+45 error     at async Promise.all (index 0)
