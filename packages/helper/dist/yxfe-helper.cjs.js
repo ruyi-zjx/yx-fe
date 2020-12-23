@@ -1,8 +1,12 @@
 /*!
- * helper.js v0.0.1
- * (c) 2020-2020 zjx <ruyi_zozo@163.com>
+ * yxfe-helper.js v0.0.3
+ * (c) 2020-2020 zzzjx <ruyi_zozo@163.com>
  * Released under the MIT License.
  */
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var pathToRegexp = require('path-to-regexp').pathToRegexp;
 /**
  * 获取目标页面的动态配置
@@ -31,10 +35,10 @@ var VVisible = {
     dynamicSetting: undefined,
     install: function (Vue, options) {
         if (!(options === null || options === void 0 ? void 0 : options.store))
-            return console.warn(DIRE + '注册指令必须传入`vuex`实例，注册失败');
-        var dynamicSetting = options.store[options.dynamicStoreKey || 'dynamicSetting'];
+            return console.error(DIRE + '指令注册失败：注册指令必须传入`vuex`实例');
+        var dynamicSetting = options.store.state[options.dynamicStoreKey || 'dynamicSetting'];
         if (!dynamicSetting)
-            return console.warn(DIRE + '未发现存储动态配置的`module`，注册失败');
+            return console.error(DIRE + '指令注册失败：未发现存储动态配置的`module`.');
         this.dynamicSetting = dynamicSetting;
         Vue.directive('visible-yx', {
             inserted: this.inserted.bind(this),
@@ -105,4 +109,5 @@ function handleTable(setting, elementName, el, binding, vnode) {
     Object.assign(vm === null || vm === void 0 ? void 0 : vm.scroll, scroll);
 }
 
-export { VVisible, getPageSetting };
+exports.VVisible = VVisible;
+exports.getPageSetting = getPageSetting;

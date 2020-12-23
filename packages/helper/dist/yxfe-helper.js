@@ -1,12 +1,12 @@
 /*!
- * helper.js v0.0.1
- * (c) 2020-2020 zjx <ruyi_zozo@163.com>
+ * yxfe-helper.js v0.0.3
+ * (c) 2020-2020 zzzjx <ruyi_zozo@163.com>
  * Released under the MIT License.
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.helper = {}));
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['yxfe-helper'] = {}));
 }(this, (function (exports) { 'use strict';
 
   var pathToRegexp = require('path-to-regexp').pathToRegexp;
@@ -37,10 +37,10 @@
       dynamicSetting: undefined,
       install: function (Vue, options) {
           if (!(options === null || options === void 0 ? void 0 : options.store))
-              return console.warn(DIRE + '注册指令必须传入`vuex`实例，注册失败');
-          var dynamicSetting = options.store[options.dynamicStoreKey || 'dynamicSetting'];
+              return console.error(DIRE + '指令注册失败：注册指令必须传入`vuex`实例');
+          var dynamicSetting = options.store.state[options.dynamicStoreKey || 'dynamicSetting'];
           if (!dynamicSetting)
-              return console.warn(DIRE + '未发现存储动态配置的`module`，注册失败');
+              return console.error(DIRE + '指令注册失败：未发现存储动态配置的`module`.');
           this.dynamicSetting = dynamicSetting;
           Vue.directive('visible-yx', {
               inserted: this.inserted.bind(this),
@@ -117,4 +117,4 @@
   Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=helper.js.map
+//# sourceMappingURL=yxfe-helper.js.map
