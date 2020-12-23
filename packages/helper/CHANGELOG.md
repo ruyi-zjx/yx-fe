@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.3...yxfe-helper@0.0.4) (2020-12-23)
+
+
+### Bug Fixes
+
+* rebuild ([74b408f](https://github.com/ruyi-zjx/yx-fe/commit/74b408fba492f412c5657407befa462c07eb5c8c))
+
+
+
+
+
 ## [0.0.3](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.1...yxfe-helper@0.0.3) (2020-12-23)
 
 **Note:** Version bump only for package yxfe-helper
