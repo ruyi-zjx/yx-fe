@@ -1,5 +1,5 @@
 {
-  "name": "helper",
+  "name": "yxfe-helper",
   "version": "0.0.3",
   "description": "前端工具类库",
   "keywords": [
@@ -45,5 +45,5 @@
   "dependencies": {
     "path-to-regexp": "^6.2.0"
   },
-  "gitHead": "0ce32687c8407c6b57d875dc51e59525b1753781"
+  "gitHead": "42a4e927f402eea4097ef8dc15af8ad3dfdf544a"
 }
