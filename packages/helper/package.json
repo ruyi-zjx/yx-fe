@@ -9,8 +9,8 @@
   "author": "zzzjx <ruyi_zozo@163.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "dist/helper.cjs.js",
-  "module": "dist/helper.esm.js",
+  "main": "dist/yxfe-helper.cjs.js",
+  "module": "dist/yxfe-helper.esm.js",
   "files": [
     "dist",
     "types"
