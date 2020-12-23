@@ -1,6 +1,6 @@
 {
   "name": "yxfe-helper",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "前端工具类库",
   "keywords": [
     "yx",
@@ -16,9 +16,6 @@
     "types"
   ],
   "typings": "types",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build": "yarn run clean && rollup -c",
     "clean": "rimraf dist"
@@ -44,6 +41,5 @@
   },
   "dependencies": {
     "path-to-regexp": "^6.2.0"
-  },
-  "gitHead": "42a4e927f402eea4097ef8dc15af8ad3dfdf544a"
+  }
 }
