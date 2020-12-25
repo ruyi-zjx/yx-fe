@@ -1,22 +1,32 @@
-import { PluginFunction, DirectiveFunction, DirectiveOptions } from 'vue';
-import { DirectiveBinding } from 'vue/types/options';
-import { Store } from 'vuex';
+import { PluginFunction, DirectiveFunction, DirectiveOptions } from 'vue'
+import { DirectiveBinding } from 'vue/types/options'
+import { Store } from 'vuex'
 
 interface ExtDirectiveBinding extends DirectiveBinding {
-  rawName?: string;
+  rawName?: string
 }
 
 interface ExtDirectiveFunction {
-  (el: HTMLElement, binding: ExtDirectiveBinding, vnode: VNode, oldVnode: VNode): void;
+  (el: HTMLElement, binding: ExtDirectiveBinding, vnode: VNode, oldVnode: VNode): void
 }
 
 interface PluginOptions {
-  store: Store;
-  [key: string]: any;
+  store: Store
+  [key: string]: any
 }
 
 interface IVVisibleYx {
-  install: PluginFunction<PluginOptions>;
-  inserted: ExtDirectiveFunction;
-  dynamicSetting?: DynamicSetting;
+  install: PluginFunction<PluginOptions>
+  inserted: ExtDirectiveFunction
+  dynamicSetting?: DynamicSetting
+}
+
+interface IVHandlers {
+  [key: string]: (
+    setting: TableSetting,
+    elementName: string,
+    el: HTMLElement,
+    binding: DirectiveBinding,
+    vnode: VNode
+  ) => void
 }

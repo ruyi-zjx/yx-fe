@@ -1,6 +1,6 @@
 import { VNode } from 'vue'
 import { DirectiveBinding } from 'vue/types/options'
-import { IVVisibleYx } from '../../types/visible'
+import { IVHandlers, IVVisibleYx } from '../../types/visible'
 import getPageSetting from '../get-page-setting'
 
 const DIRE = `[ visible-yx ] `
@@ -32,18 +32,19 @@ const VVisible: IVVisibleYx = {
     // 从修饰符中获取当前组件类型
     const component = Object.keys(binding.modifiers)[0] || 'default'
     // 预置好的组件处理函数
-    const presetCompHandler = {
+    const presetCompHandler: IVHandlers = {
       table: handleTable,
     }
+    const compHandlers = Object.keys(presetCompHandler)
     if (component === 'default') {
       handleDefault(setting, elementName, el, binding, vnode)
-    } else if (Object.keys(presetCompHandler).includes(component)) {
+    } else if (component in compHandlers) {
       const compSetting = setting[component]
       if (!compSetting) return
       // 因为一个页面可能有多个相同的组件，所以这边继续拿指定元素名的组件配置
-      const eleSetting = compSetting[elementName]
+      const eleSetting = compSetting[elementName] as TableSetting
       if (!eleSetting || !Object.keys(eleSetting).length) return
-      const handler = setting[component]
+      const handler = presetCompHandler[component]
       handler(eleSetting, elementName, el, binding, vnode)
     } else {
       console.warn(`${DIRE} 未发现\`${component}\`组件类型的处理函数，请检查\`${binding.rawName}\`指令语法是否正确`)

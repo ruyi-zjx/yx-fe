@@ -1,0 +1,30 @@
+{
+  "name": "yxfe-vcomp",
+  "version": "0.0.1",
+  "private": true,
+  "description": "基于ant design vue 二次封装的组件库",
+  "keywords": [
+    "yx"
+  ],
+  "author": "zjx <ruyi_zozo@163.com>",
+  "homepage": "https://github.com/ruyi-zjx/yx-fe#readme",
+  "license": "ISC",
+  "main": "lib/yxfe-vcomp.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruyi-zjx/yx-fe.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ruyi-zjx/yx-fe/issues"
+  }
+}
