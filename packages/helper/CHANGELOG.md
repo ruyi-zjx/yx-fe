@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.7...yxfe-helper@0.0.8) (2020-12-25)
+
+
+### Bug Fixes
+
+* VVisible ([8fef82c](https://github.com/ruyi-zjx/yx-fe/commit/8fef82c8935f097e5c66fed52f485fbe3bb13de8))
+* VVsioble ([43700c2](https://github.com/ruyi-zjx/yx-fe/commit/43700c22c083771a91d4e2951bf31939b11d83ec))
+
+
+
+
+
 ## [0.0.7](https://github.com/ruyi-zjx/yx-fe/compare/yxfe-helper@0.0.5...yxfe-helper@0.0.7) (2020-12-23)
 
 
