@@ -38,7 +38,7 @@ const VVisible: IVVisibleYx = {
     const compHandlers = Object.keys(presetCompHandler)
     if (component === 'default') {
       handleDefault(setting, elementName, el, binding, vnode)
-    } else if (component in compHandlers) {
+    } else if (compHandlers.includes(component)) {
       const compSetting = setting[component]
       if (!compSetting) return
       // 因为一个页面可能有多个相同的组件，所以这边继续拿指定元素名的组件配置
