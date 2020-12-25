@@ -1,5 +1,5 @@
 /*!
- * yxfe-helper.js v0.0.7
+ * yxfe-helper.js v0.0.8
  * (c) 2020-2020 zzzjx <ruyi_zozo@163.com>
  * Released under the MIT License.
  */
@@ -63,7 +63,7 @@ var VVisible = {
         if (component === 'default') {
             handleDefault(setting, elementName, el);
         }
-        else if (component in compHandlers) {
+        else if (compHandlers.includes(component)) {
             var compSetting = setting[component];
             if (!compSetting)
                 return;
