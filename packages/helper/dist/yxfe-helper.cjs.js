@@ -1,5 +1,5 @@
 /*!
- * yxfe-helper.js v0.0.3
+ * yxfe-helper.js v0.0.7
  * (c) 2020-2020 zzzjx <ruyi_zozo@163.com>
  * Released under the MIT License.
  */
@@ -63,10 +63,11 @@ var VVisible = {
         var presetCompHandler = {
             table: handleTable,
         };
+        var compHandlers = Object.keys(presetCompHandler);
         if (component === 'default') {
             handleDefault(setting, elementName, el);
         }
-        else if (Object.keys(presetCompHandler).includes(component)) {
+        else if (component in compHandlers) {
             var compSetting = setting[component];
             if (!compSetting)
                 return;
@@ -74,7 +75,7 @@ var VVisible = {
             var eleSetting = compSetting[elementName];
             if (!eleSetting || !Object.keys(eleSetting).length)
                 return;
-            var handler = setting[component];
+            var handler = presetCompHandler[component];
             handler(eleSetting, elementName, el, binding, vnode);
         }
         else {
